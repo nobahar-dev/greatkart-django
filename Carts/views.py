@@ -16,9 +16,14 @@ def _cart_id(request: HttpRequest):
 
 
 def add_cart(request: HttpRequest, product_id):
+<<<<<<< HEAD
     if request.method == 'POST':
         color = request.POST['color']
         size = request.POST['size']
+=======
+    color = request.GET['color']
+    size = request.GET['size']
+>>>>>>> 5d07aed7daba8bac0b11e9eb186b4fdbeb657999
 
     product: Product = Product.objects.get(id=product_id)
 
